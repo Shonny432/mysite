@@ -5,6 +5,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Music from './components/Music'
 import Footer from './components/Footer'
+import Divider from './components/Divider'
 
 function App() {
   return (
@@ -12,8 +13,11 @@ function App() {
       <Nav />
       <Header />
       <About />
+      <Divider />
       <Skills />
+      <Divider />
       <Projects />
+      <Divider />
       <Music />
       <Footer />
     </>
