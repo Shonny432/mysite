@@ -1,5 +1,6 @@
 import { useLanguage } from '../i18n/LanguageContext'
 import { translations } from '../i18n/translations'
+import { useInView } from '../hooks/useInView'
 import './Skills.css'
 
 const SKILL_GROUPS = [
@@ -68,11 +69,14 @@ const SKILL_GROUPS = [
 export default function Skills() {
   const { lang } = useLanguage()
   const t = translations[lang]
+  const { ref, inView } = useInView<HTMLHeadingElement>()
 
   return (
     <section className="section skills" id="skills">
       <p className="eyebrow">{t.skills.eyebrow}</p>
-      <h2 className="skills__heading">{t.skills.heading}</h2>
+      <h2 ref={ref} className={`skills__heading reveal ${inView ? 'reveal--visible' : ''}`}>
+        {t.skills.heading}
+      </h2>
       <div className="skills__grid">
         {SKILL_GROUPS.map((group) => (
           <div className="skills__group" key={group.category}>

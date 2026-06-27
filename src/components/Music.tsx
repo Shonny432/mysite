@@ -1,5 +1,6 @@
 import { useLanguage } from '../i18n/LanguageContext'
 import { translations } from '../i18n/translations'
+import { useInView } from '../hooks/useInView'
 import './Music.css'
 
 const SPOTIFY_ARTIST_ID = '7juGSQjYepHQNUApLLDeyU'
@@ -7,11 +8,14 @@ const SPOTIFY_ARTIST_ID = '7juGSQjYepHQNUApLLDeyU'
 export default function Music() {
   const { lang } = useLanguage()
   const t = translations[lang]
+  const { ref, inView } = useInView<HTMLHeadingElement>()
 
   return (
     <section className="section music" id="other">
       <p className="eyebrow">{t.music.eyebrow}</p>
-      <h2 className="music__heading">{t.music.heading}</h2>
+      <h2 ref={ref} className={`music__heading reveal ${inView ? 'reveal--visible' : ''}`}>
+        {t.music.heading}
+      </h2>
       <div className="music__embed">
         <iframe
           title="Spotify artist"
