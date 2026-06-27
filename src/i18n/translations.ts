@@ -48,8 +48,8 @@ export const translations: Record<Lang, {
     projects: {
       eyebrow: 'Selected Work',
       heading: 'Projects & experiments',
-      viewCase: 'View case →',
-      caseStudy: 'Case Study',
+      viewCase: 'View project →',
+      caseStudy: 'Project',
       close: 'Close',
       visitWebsite: 'Visit website',
     },
@@ -129,8 +129,8 @@ export const translations: Record<Lang, {
     projects: {
       eyebrow: 'Проєкти',
       heading: 'Проєкти та експерименти',
-      viewCase: 'Дивитись кейс →',
-      caseStudy: 'Кейс',
+      viewCase: 'Дивитись проект →',
+      caseStudy: 'Проект',
       close: 'Закрити',
       visitWebsite: 'Перейти на сайт',
     },
