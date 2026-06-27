@@ -1,0 +1,31 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 64px 0 32px;
+}
+
+.footer__content {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.footer__title {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.footer__text {
+  color: var(--text-dim);
+  font-size: 15px;
+}
+
+.footer__copy {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+  margin-top: 48px;
+}

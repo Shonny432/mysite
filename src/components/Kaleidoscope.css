@@ -1,0 +1,76 @@
+.kaleidoscope {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.kaleidoscope__core {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 60px 20px var(--accent-dim);
+  z-index: 2;
+}
+
+.kaleidoscope__ring {
+  position: absolute;
+  width: 78vmin;
+  height: 78vmin;
+  max-width: 900px;
+  max-height: 900px;
+  border-radius: 50%;
+}
+
+.kaleidoscope__ring--cw {
+  transform: rotate(calc(var(--scroll, 0) * 0.07deg));
+  filter: blur(0.2px);
+}
+
+.kaleidoscope__ring--ccw {
+  transform: rotate(calc(var(--scroll, 0) * -0.05deg));
+  mix-blend-mode: var(--kaleido-blend, screen);
+  opacity: 0.65;
+}
+
+.kaleidoscope__slice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 0%;
+  transform: rotate(calc(var(--i) * (360deg / var(--n))));
+  clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 28%, transparent) 0%,
+    transparent 55%
+  );
+  border-top: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  opacity: 0.35;
+}
+
+.kaleidoscope__slice:nth-child(even) {
+  opacity: 0.65;
+}
+
+.kaleidoscope__slice--alt {
+  background: linear-gradient(
+    225deg,
+    color-mix(in srgb, rgb(var(--star-rgb)) 10%, transparent) 0%,
+    transparent 60%
+  );
+  border-top-color: color-mix(in srgb, rgb(var(--star-rgb)) 14%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kaleidoscope__ring--cw,
+  .kaleidoscope__ring--ccw {
+    transform: none;
+  }
+}

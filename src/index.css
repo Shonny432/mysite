@@ -1,0 +1,112 @@
+:root {
+  --bg: #0a0a0c;
+  --bg-soft: #111114;
+  --surface: #16161a;
+  --border: #26262b;
+  --text: #c8c8cd;
+  --text-dim: #84848c;
+  --text-h: #f5f5f7;
+  --accent: #00e0ff;
+  --accent-dim: rgba(0, 224, 255, 0.12);
+  --accent-border: rgba(0, 224, 255, 0.4);
+  --shadow: rgba(0, 0, 0, 0.5) 0 20px 40px -10px;
+  --star-rgb: 255, 255, 255;
+  --kaleido-blend: screen;
+
+  --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'JetBrains Mono', Consolas, monospace;
+
+  font: 17px/1.6 var(--sans);
+  letter-spacing: 0.1px;
+  color-scheme: dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+:root[data-theme='light'] {
+  --bg: #f6f6f8;
+  --bg-soft: #ffffff;
+  --surface: #ffffff;
+  --border: #e2e2e7;
+  --text: #4a4a52;
+  --text-dim: #7a7a84;
+  --text-h: #0d0d10;
+  --accent: #0089a3;
+  --accent-dim: rgba(0, 137, 163, 0.1);
+  --accent-border: rgba(0, 137, 163, 0.4);
+  --shadow: rgba(15, 15, 20, 0.12) 0 20px 40px -10px;
+  --star-rgb: 10, 10, 14;
+  --kaleido-blend: multiply;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--accent);
+  color: #00121a;
+}
+
+.section {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 96px 0;
+  scroll-margin-top: 96px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+}
