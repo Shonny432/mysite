@@ -4,7 +4,7 @@ import './Footer.css'
 
 const GITHUB_URL = 'https://github.com/Shonny432'
 const EMAIL_URL = 'mailto:kutsenko.alexander@gmail.com'
-const RESUME_URL = '/resume.pdf'
+const RESUME_URL = '/Oleksandr_Kutsenko_Frontend_Developer_CV.pdf'
 
 export default function Footer() {
   const { lang } = useLanguage()

@@ -8,7 +8,7 @@ import './Header.css'
 const GITHUB_URL = 'https://github.com/Shonny432'
 const LINKEDIN_URL = 'https://www.linkedin.com/in/oleksandr-kutsenko-053b4248/'
 const EMAIL_URL = 'mailto:kutsenko.alexander@gmail.com'
-const RESUME_URL = '/resume.pdf'
+const RESUME_URL = '/Oleksandr_Kutsenko_Frontend_Developer_CV.pdf'
 
 export default function Header() {
   const parallaxRef = useRef<HTMLDivElement>(null)
