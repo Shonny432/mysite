@@ -3,6 +3,7 @@ import { translations } from '../i18n/translations'
 import { useTheme } from '../theme/ThemeContext'
 import flagUk from '../assets/flag-uk.svg'
 import flagUa from '../assets/flag-ua.svg'
+import flagPl from '../assets/flag-pl.svg'
 import './Nav.css'
 
 export default function Nav() {
@@ -79,6 +80,15 @@ export default function Nav() {
             aria-label="Українська"
           >
             <img src={flagUa} alt="" aria-hidden="true" />
+          </button>
+          <button
+            type="button"
+            className={lang === 'pl' ? 'nav__lang-btn nav__lang-btn--active' : 'nav__lang-btn'}
+            onClick={() => setLang('pl')}
+            aria-pressed={lang === 'pl'}
+            aria-label="Polski"
+          >
+            <img src={flagPl} alt="" aria-hidden="true" />
           </button>
         </div>
       </div>

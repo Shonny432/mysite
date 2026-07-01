@@ -172,4 +172,85 @@ export const translations: Record<Lang, {
       text: 'Олександр Куценко — Frontend-розробник (React)',
     },
   },
+  pl: {
+    nav: {
+      about: 'O mnie',
+      skills: 'Umiejętności',
+      projects: 'Projekty',
+      other: 'Inne',
+    },
+    header: {
+      role: 'Frontend Developer · React',
+      tagline:
+        'Tworzę interfejsy, które przyciągają uwagę: precyzyjna animacja, wydajny rendering i dbałość o szczegóły.',
+      downloadCv: 'Pobierz CV',
+      github: 'GitHub',
+      linkedin: 'LinkedIn',
+    },
+    about: {
+      eyebrow: 'O mnie',
+      heading: 'Frontend developer dbający o szczegóły',
+      text: 'Frontend Developer z ponad 5-letnim komercyjnym doświadczeniem w tworzeniu aplikacji desktopowych i webowych przy użyciu JavaScript (ES6+), TypeScript, React.js, Redux i Angular. Realizowałem funkcjonalności dla dużych produktów konsumenckich w obszarze edycji PDF i przetwarzania zdjęć, z których korzystają miliony użytkowników na całym świecie. Specjalizuję się w architekturze komponentowej, zarządzaniu stanem, optymalizacji wydajności, integracji REST API oraz testowaniu jednostkowym z Jest. Swobodnie pracuję w środowiskach Agile/Scrum i zespołach cross-funkcjonalnych.',
+    },
+    skills: {
+      eyebrow: 'Umiejętności techniczne',
+      heading: 'Z czym pracuję',
+      categories: {
+        Languages: 'Języki',
+        'Frameworks & Libraries': 'Frameworki i biblioteki',
+        Styling: 'Stylowanie',
+        'Performance & Quality': 'Wydajność i jakość',
+        Testing: 'Testowanie',
+        'Tools & Build': 'Narzędzia i build',
+        Workflow: 'Workflow',
+        'Design Collaboration': 'Współpraca z designem',
+        'AI-Assisted Development': 'Rozwój z AI',
+      },
+    },
+    projects: {
+      eyebrow: 'Projekty',
+      heading: 'Projekty i eksperymenty',
+      viewCase: 'Zobacz projekt →',
+      caseStudy: 'Projekt',
+      close: 'Zamknij',
+      visitWebsite: 'Odwiedź stronę',
+    },
+    projectContent: {
+      'inpixio-photo-studio': {
+        description: 'Desktopowa aplikacja do edycji zdjęć dla użytkowników konsumenckich i prosumer.',
+        highlights: [
+          'Tworzyłem UI dla desktopowej aplikacji do edycji zdjęć skierowanej do użytkowników konsumenckich i prosumer',
+          'Implementowałem wielokrotnie używalne komponenty i pomagałem budować architekturę projektu od wczesnych etapów',
+          'Poprawiłem responsywność aplikacji i doświadczenie użytkownika dzięki ukierunkowanym optymalizacjom wydajności',
+          'Ściśle współpracowałem z designerami, programistami backend i inżynierami QA w zespole cross-funkcjonalnym',
+        ],
+      },
+      'soda-pdf-desktop': {
+        description: 'Desktopowy edytor PDF dystrybuowany do globalnej bazy użytkowników.',
+        highlights: [
+          'Tworzyłem funkcje UI dla desktopowego edytora PDF dystrybuowanego do globalnej bazy użytkowników',
+          'Budowałem wielokrotnie używalne komponenty React i strukturyzowałem architekturę projektu pod kątem długoterminowej utrzymywalności',
+          'Badałem i naprawiałem problemy produkcyjne zgłaszane przez QA i użytkowników końcowych, poprawiając stabilność aplikacji',
+        ],
+      },
+      'soda-pdf-online': {
+        description: 'Webowy edytor PDF używany przez miliony użytkowników miesięcznie.',
+        highlights: [
+          'Rozwijałem nowe funkcje i refaktoryzowałem przestarzałe moduły webowego edytora PDF używanego przez miliony użytkowników miesięcznie',
+          'Zaimplementowałem bibliotekę wielokrotnie używalnych komponentów UI z Sass/SCSS, zapewniając spójny design produktu',
+          'Integrowałem REST API do przetwarzania dokumentów, uwierzytelniania i zarządzania subskrypcjami',
+          'Pisałem testy jednostkowe z Jest, przyczyniając się do wzrostu pokrycia testami i redukcji błędów regresji',
+          'Współpracowałem z designerami w Figma i uczestniczyłem w code review oraz ceremoniach Scrum',
+        ],
+      },
+    },
+    music: {
+      eyebrow: 'Inne',
+      heading: 'Moja muzyka',
+    },
+    footer: {
+      title: 'Porozmawiajmy o Twoim projekcie',
+      text: 'Oleksandr Kutsenko — Frontend Developer (React)',
+    },
+  },
 }

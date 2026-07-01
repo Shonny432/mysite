@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 
-export type Lang = 'en' | 'ua'
+export type Lang = 'en' | 'ua' | 'pl'
 
 type LanguageContextValue = {
   lang: Lang
@@ -9,17 +9,20 @@ type LanguageContextValue = {
 
 const STORAGE_KEY = 'site-lang'
 
+const VALID_LANGS: Lang[] = ['en', 'ua', 'pl']
+
 const LanguageContext = createContext<LanguageContextValue | null>(null)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>(() => {
     const stored = localStorage.getItem(STORAGE_KEY)
-    return stored === 'ua' ? 'ua' : 'en'
+    return VALID_LANGS.includes(stored as Lang) ? (stored as Lang) : 'en'
   })
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, lang)
-    document.documentElement.lang = lang === 'ua' ? 'uk' : 'en'
+    const htmlLang = lang === 'ua' ? 'uk' : lang === 'pl' ? 'pl' : 'en'
+    document.documentElement.lang = htmlLang
   }, [lang])
 
   return <LanguageContext.Provider value={{ lang, setLang }}>{children}</LanguageContext.Provider>
